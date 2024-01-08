@@ -23,12 +23,7 @@ void GenerateUuidV7Series(benchmark::State& state) {
   GenerateUuidSeries(&utils::generators::GenerateBoostUuid7, state);
 }
 
-void GenerateUuidV7V2Series(benchmark::State& state) {
-  GenerateUuidSeries(&utils::generators::GenerateBoostUuid7V2, state);
-}
-
 BENCHMARK(GenerateUuidV4Series)->RangeMultiplier(2)->Range(1, 1 << 20);
 BENCHMARK(GenerateUuidV7Series)->RangeMultiplier(2)->Range(1, 1 << 20);
-BENCHMARK(GenerateUuidV7V2Series)->RangeMultiplier(2)->Range(1, 1 << 20);
 
 USERVER_NAMESPACE_END
