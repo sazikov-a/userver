@@ -18,6 +18,8 @@ namespace generators {
 /// https://datatracker.ietf.org/doc/html/draft-ietf-uuidrev-rfc4122bis#name-uuid-version-7
 boost::uuids::uuid GenerateBoostUuid7();
 
+boost::uuids::uuid GenerateBoostUuid7V2();
+
 }  // namespace generators
 
 }  // namespace utils
