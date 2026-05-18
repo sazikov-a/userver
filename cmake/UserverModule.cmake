@@ -151,6 +151,9 @@ function(userver_module MODULE)
             userver-${MODULE}-dbtest PRIVATE $<TARGET_PROPERTY:userver-${MODULE},INCLUDE_DIRECTORIES>
                                              ${ARG_DBTEST_DIRS}
         )
+
+        list(APPEND ARG_DBTEST_ENV "--log-level=info")
+
         userver_add_utest(
             NAME userver-${MODULE}-dbtest
             DATABASES ${ARG_DBTEST_DATABASES}
